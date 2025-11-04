@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Empowering the Nation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <header style="color: #ffffff; padding: 25px;background-color: #003366;">
+
+        <h1>EMPOWERING THE NATION </h1>
+
+    </header> 
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="apply.html">Apply</a></li>
+        <li><a href="pricing.html">Pricing </a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+      </ul>
+    </nav> 
+
+    <section class="courses">
+                <h2>Course  Fees</h2>
+                <div class="course-list">
+                    <label>
+                        <input type="checkbox" name="course" value="Garden Maintenance" data-fee="750">
+                        Garden Maintenance - R750
+                    </label>
+                    <br></br>
+                    <label>
+                        <input type="checkbox" name="course" value="Child Minding" data-fee="750">
+                        Child Minding - R750
+                    </label>
+                     <br></br>
+                    <label>
+                        <input type="checkbox" name="course" value="Cooking" data-fee="750">
+                        Cooking - R750
+                    </label>
+                     <br></br>
+                    <label>
+                        <input type="checkbox" name="course" value="Life Skills" data-fee="1500">
+                        Life Skills - R1500
+                    </label>
+                     <br></br>
+                    <label>
+                        <input type="checkbox" name="course" value="First Aid" data-fee="1500">
+                        First Aid - R1500
+                    </label>
+                     <br></br>
+                    <label>
+                        <input type="checkbox" name="course" value="Sewing" data-fee="1500">
+                        Sewing - R1500
+                    </label>
+                     <br></br>
+                    <label>
+                        <input type="checkbox" name="course" value="Landscaping" data-fee="1500">
+                        Landscaping - R1500
+                    </label>
+                </div>
+            </section>
+
+            <div style="text-align: center; margin-top: 20px;">
+            <button type="button" id="calculateBtn">Calculate Total Fees</button>
+            </div>
+
+            <section class="total-fees">
+                <h2>Quoted Total Fees (VAT Included)</h2>
+                <div id="totalFeesOutput">
+                    <p>Select courses and click 'Calculate Total Fees' to see the quoted amount.</p>
+                     <br></br>
+                     <button type="submit" id="registrationForm">Submit Application</button>
+                </div>
+            </section>
+
+    </div>
+
+  <footer>
+    <p>&copy; 2025 Empowering The Nation | All Rights Reserved</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

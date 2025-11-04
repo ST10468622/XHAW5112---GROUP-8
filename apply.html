@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply - Empowering the Nation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header style="color: #ffffff; padding: 25px;background-color: #003366;">
+    
+    <nav>
+    </nav>
+
+        <h1>EMPOWERING THE NATION </h1>
+         
+
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="apply.html" class="active">Apply</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <section class="apply-section">
+      <h1>Application Form</h1>
+      <br></br>
+
+      <form action="https://formsubmit.co/giftsbyzukhanya@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="thankyou.html">
+
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="First Name" required>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="Last Name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="Email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="Phone Number" required>
+
+        <label for="course">Select Course:</label>
+        <select id="course" name="Selected Course" required>
+          <option value="">-- Please select a course --</option>
+          <option value="Sewing">Sewing</option>
+          <option value="Cooking">Cooking</option>
+          <option value="Child Minding">Child Minding</option>
+          <option value="Garden Maintenance">Garden Maintenance</option>
+          <option value="Landscaping">Landscaping</option>
+          <option value="First Aid">First Aid</option>
+        </select>
+
+        <div id="courseMessage" class="course-message"></div>
+
+        <label for="message">Why do you want to join this course?</label>
+        <textarea id="message" name="Motivation Message" rows="5" required></textarea>
+
+        <button type="submit">Submit Application</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Empowering the Nation | Building Futures Together</p>
+  </footer>
+
+  <script>
+    const courseSelect = document.getElementById('course');
+    const messageBox = document.getElementById('courseMessage');
+
+    const messages = {
+      "Sewing": "🧵 Great choice! Our Sewing course helps you master garment creation and alteration.",
+      "Cooking": "🍳 Delicious! The Cooking course teaches you practical culinary skills and recipe development.",
+      "Child Minding": "👶 Perfect! Child Minding focuses on childcare, safety, and early learning skills.",
+      "Garden Maintenance": "🌿 Green thumb alert! Learn how to care for gardens and outdoor spaces professionally.",
+      "Landscaping": "🌼 Excellent! Landscaping combines creativity and design for outdoor transformations.",
+      "First Aid": "⛑️ Important choice! Our First Aid course teaches life-saving emergency response techniques."
+    };
+
+    courseSelect.addEventListener('change', () => {
+      const selected = courseSelect.value;
+      if (messages[selected]) {
+        messageBox.textContent = messages[selected];
+        messageBox.style.display = 'block';
+      } else {
+        messageBox.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
